@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AAED Interactive Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<button class="sidebar-toggle" onclick="toggleMobileSidebar()">&#9776;</button>
+<div class="sidebar-overlay" onclick="closeMobileSidebar()"></div>
+
+<div class="shell">
+  <div class="sidebar">
+    <div class="s-head">
+      <div class="s-logo"><span class="s-dot"></span>AAED Roadmap</div>
+      <div class="s-prog-bar"><div class="s-prog-fill" id="spf"></div></div>
+      <div class="s-prog-txt"><span id="spt">0 / 28 done</span><span id="spp">0%</span></div>
+    </div>
+    <div class="s-nav" id="snav"></div>
+  </div>
+
+  <div class="main" id="main">
+    <div class="m-inner">
+      <div class="m-hero">
+        <div class="m-eyebrow">Intensive &middot; Self-paced &middot; Designer Track</div>
+        <h1 class="m-h1">AI Agentic<br/><em>Experience Design</em></h1>
+        <p class="m-sub">A visual learning roadmap for designers entering the world of autonomous AI systems &mdash; from first principles to production-ready frameworks.</p>
+        <div class="m-legend">
+          <div class="m-pill"><span class="m-pill-dot" style="background:var(--purple)"></span>Concept</div>
+          <div class="m-pill"><span class="m-pill-dot" style="background:var(--amber)"></span>Case study</div>
+          <div class="m-pill"><span class="m-pill-dot" style="background:var(--green)"></span>Framework</div>
+          <div class="m-pill"><span class="m-pill-dot" style="background:var(--blue)"></span>Project</div>
+        </div>
+      </div>
+      <div id="roadmap-body"></div>
+    </div>
+    <footer>
+      AI Agentic Experience Design Roadmap &middot; Built with Claude &middot;
+      <a onclick="resetProgress()">Reset progress</a>
+    </footer>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Data & Content -->
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/content/module1.js"></script>
+<script src="js/content/module2.js"></script>
+<script src="js/content/module3.js"></script>
+<script src="js/content/module4.js"></script>
+<script src="js/content/module5.js"></script>
+<script src="js/content/module6.js"></script>
+<!-- App Logic -->
+<script src="js/app.js"></script>
+</body>
+</html>
