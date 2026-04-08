@@ -116,6 +116,31 @@ registerContent([
           </ol>
         </div>
 
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What are the three phases of an AI agent's core loop, and what does each phase do?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Perceive (gather inputs like user messages, API data, file contents), Reason (interpret context, weigh options, form a plan), Act (execute actions like calling APIs, writing code, sending messages). The output of Act feeds back into Perceive, creating a continuous loop.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. A user asks Google Translate to convert a sentence. Is Google Translate an AI agent or a tool? Why?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>It is a tool, not an agent. It performs a one-shot transaction — input in, output out — with no loop, no adaptation, and no multi-step reasoning. An agent would operate in multiple turns, observing results and adjusting its approach.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. Name two specific ways that the perception-reasoning-action loop changes UX design requirements compared to traditional request-response interfaces.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Any two of: (1) Time becomes unpredictable — tasks can take minutes, not milliseconds, requiring more than a spinner. (2) Intermediate states become visible — users see the agent working, requiring careful design of those states. (3) Control becomes a spectrum — designers must decide when to let the agent continue vs. when to pause for approval. (4) Errors compound — a mistake early in the loop may not surface until many steps later.</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `
   },
@@ -250,6 +275,31 @@ registerContent([
             <li class="lesson-text">Think about a product that feels like it's at the wrong autonomy level — either too autonomous or not autonomous enough. What would you change?</li>
             <li class="lesson-text">For your current or next project, which level is the right starting point? How might you design a path for users to move up the spectrum over time?</li>
           </ol>
+        </div>
+
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What are the four levels of the agentic spectrum, from lowest to highest autonomy?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Level 1: Chatbot (single-turn Q&amp;A), Level 2: Copilot (AI suggests, human decides), Level 3: Multi-Step (AI executes multi-step tasks with checkpoints), Level 4: Autonomous (AI runs independently with minimal oversight).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. A product starts as a Level 2 copilot but users keep requesting more automation. What three factors should you evaluate before increasing the autonomy level?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>(1) Stakes — how bad is it if the AI gets it wrong? (2) Predictability — how well-defined is the task? (3) User trust maturity — have users built enough confidence through experience to handle higher autonomy?</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. Claude in a basic conversation is Level 1, but Claude Code running headless on a CI pipeline is Level 4. What makes the same underlying AI sit at different levels?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>The autonomy level is determined by the product design, not the underlying model. Claude in conversation requires human input each turn (Level 1). Claude Code headless operates independently for extended periods with minimal human oversight (Level 4). The UX layer — how much control the human retains — determines the level.</p></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -387,6 +437,31 @@ registerContent([
           </ol>
         </div>
 
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What does the copilot model optimize the UX for: the "during," the "before," or the "after"? What about the autopilot model?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>The copilot model optimizes for the "during" — making the in-the-moment coding experience seamless. The autopilot model optimizes for the "before" (clear task specification) and the "after" (efficient review and approval).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. In GitHub Copilot, what are the four design principles that make inline suggestions work? Name at least three.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Minimal disruption (ghost text doesn't move cursor or reflow the page), instant evaluation (suggestion is readable in-place), zero-cost rejection (ignoring a suggestion costs nothing), preserved flow state (developer stays in their creative zone).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. When should you choose the autopilot model over the copilot model? Give two specific criteria.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Choose autopilot when: (1) the task is well-defined and repeatable, (2) the user wants to delegate and move on to other work, (3) the agent can be given clear success criteria, (4) there's a reliable review/approval step before results go live. (Any two of these.)</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `
   },
@@ -502,6 +577,31 @@ registerContent([
             <li class="lesson-text">Think of an irreversible action in a product you're designing. What would a "dry run" mode look like for that action?</li>
             <li class="lesson-text">How might you design a "trust dashboard" that shows a user their history with an AI agent — tasks completed, accuracy rate, errors caught?</li>
           </ol>
+        </div>
+
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. Name the four core UX challenges that agentic AI systems introduce.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Latency (unpredictable task duration), Uncertainty (probabilistic outputs that may be wrong), Irreversibility (agents take real-world actions that can't be undone), and Trust (a spectrum that varies by task and changes over time).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. How do these four challenges compound each other? Give one specific example of compounding.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>They amplify each other: long latency amplifies uncertainty (the longer you wait, the more you worry if the agent is on track). Uncertainty makes irreversibility scarier (if you're not sure the agent is right, approving an irreversible action feels dangerous). All three erode trust. Example: an agent taking 5 minutes on an irreversible task with uncertain accuracy creates maximum user anxiety.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. What is a "dry run" mode, and for which of the four challenges is it a design response?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>A dry run mode shows what the agent would do without actually doing it — like a preview of the changes without applying them. It is primarily a design response to Irreversibility, allowing users to evaluate the agent's planned actions before committing to them.</p></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -627,6 +727,31 @@ registerContent([
             <li class="lesson-text">Think about the "capability-UX gap" in your own work. Is there a feature you've shipped (or plan to ship) where the AI capability exists but the UX doesn't fully support it yet?</li>
             <li class="lesson-text">If you were redesigning ChatGPT Plugins from scratch today, what's the single most important UX change you'd make?</li>
           </ol>
+        </div>
+
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What is the "capability-UX gap" and why did it doom ChatGPT Plugins?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>The capability-UX gap is when an AI system's technical capabilities exceed what its UX can support, resulting in a confusing product rather than a powerful one. Plugins could genuinely search the web, query databases, and interact with services, but the user experience couldn't support these capabilities — users couldn't discover plugins, diagnose failures, or trust the system.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. Name three of the four specific problems that caused ChatGPT Plugins to fail.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>(1) Discovery was broken — users didn't know which plugins to enable. (2) Reliability was invisible — when plugins failed, users couldn't tell where or why. (3) Trust was unearned — no permission tiers or confirmation flows for high-stakes actions. (4) The conversational interface was wrong — complex tasks needed structured UI, not a chat window.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. According to the failure prevention checklist, what does "progressive stakes" mean and why is it important?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Progressive stakes means the system starts with low-risk actions and escalates only with explicit user permission. It's important because assuming trust on day one — allowing the agent to immediately take high-consequence actions — leads to user anxiety and potential harm. Trust must be earned through demonstrated reliability on smaller tasks first.</p></div>
+            </div>
+          </div>
         </div>
 
       </div>

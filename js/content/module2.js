@@ -100,6 +100,31 @@ registerContent([
     </ol>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What three questions do users unconsciously answer when first encountering an AI agent, and why does the order matter?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>"What is this thing?", "What can it do?", and "How smart is it?" The order matters because users answer them in the first few seconds from surface cues — not actual capability — and these snap judgments become "sticky" mental models that are hard to update later.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What is the difference between over-trust and under-trust, and which is more dangerous with polished AI interfaces?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Over-trust is when users believe the agent is more capable than it is (leading to automation bias — accepting outputs without checking). Under-trust is when users believe it's less capable than it is (leading to underuse). Over-trust is more dangerous with polished AI interfaces because fluent, confident outputs mask errors — as happened when ChatGPT's polished prose led millions to trust fabricated citations.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. A designer's job is not to maximize trust but to _______ it. What does this mean in practice?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Calibrate it. In practice, this means the user's confidence in the agent should match the agent's actual reliability — no more, no less. Techniques include: scoping the introduction (stating what it can/can't do), showing confidence levels, designing the first failure gracefully, and matching tone to actual capability.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -187,6 +212,31 @@ registerContent([
       <li>Think about a product where you trust the AI outputs without checking them. Which layer is creating that trust — and is it genuinely earned or is it automation bias?</li>
       <li>Design a "trust audit card" — a single screen that shows the user all four layers of trust for your agent at a glance.</li>
     </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. Name the four layers of the Trust Calibration Stack from bottom (foundation) to top.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Layer 1: Capability Transparency ("I know what it can and can't do"), Layer 2: Behavioral Consistency ("It acts the way I expect"), Layer 3: Explainable Decisions ("I understand why it did that"), Layer 4: User Control &amp; Override ("I can step in at any time").</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Why is the stack ordered like a hierarchy — what happens if you skip Layer 1 and jump straight to Layer 3?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Like Maslow's hierarchy, you need the foundation before higher layers matter. If users don't know what the agent can do (Layer 1), no amount of explanation for its decisions (Layer 3) will build trust. A beautifully explainable agent that constantly surprises users with unexpected behavior will never be trusted.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the red flag that indicates Layer 2 (Behavioral Consistency) is missing in a product?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>"It worked yesterday but not today" complaints. When an agent behaves differently on the same input, users lose confidence fast. Micro-inconsistencies (like sometimes using bullet points, sometimes not for the same request type) erode trust faster than occasional wrong answers.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -293,6 +343,31 @@ registerContent([
     </ol>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. Transparency answers the question "______" while explainability answers "______." Fill in the blanks.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Transparency answers "What is happening / what did the agent do?" while explainability answers "Why did it do that / why this approach?"</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Give an example of a situation where high transparency is needed but low explainability is sufficient.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>When an agent is running a 5-minute task. You need high transparency (show progress, steps taken) so the user knows the system is working, but low explainability because they'll evaluate the result when it's done — they don't need to know why each step was chosen during execution.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the "golden rule" for calibrating how much transparency and explainability to show?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Be transparent about actions proportional to their impact. Be explainable about decisions proportional to their unexpectedness. A routine action needs a one-liner. A surprising or consequential decision deserves a paragraph.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -389,6 +464,31 @@ registerContent([
     </ol>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the three attention states users experience during agent tasks, and when is each appropriate?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Active monitoring (watching in real-time — appropriate for short tasks under 30s, high-stakes actions), Peripheral awareness (doing other work with a tab visible — appropriate for 1-10 min tasks), Full delegation (walking away entirely — appropriate for tasks over 10 min, routine work). The user should never have to guess which state is appropriate.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What four questions should a well-designed "away state" answer when a user returns after delegating a task?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Is it done? (status), (2) Did it work? (outcome), (3) What did it do? (summary of actions), (4) What do I need to do now? (next action). Design it like a morning briefing — scannable, prioritized, actionable.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. An agent sends 8 notifications during a 15-minute task, each saying "Step complete." Is this good design? Why or why not?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>No. This creates notification fatigue and interrupts the user's other work unnecessarily. The agent should stay quiet when progressing normally and only interrupt for: decisions needed, recoverable errors, irreversible actions, task completion, or significant unexpected findings. Routine sub-step completions should be visible in a log, not pushed as notifications.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -460,6 +560,31 @@ registerContent([
       <li>Design a "transparency dial" — a single UI control that lets the user choose between Notion-style invisibility, Perplexity-style citations, and Cursor-style full logs. What does each setting look like?</li>
       <li>Find a fourth AI product not mentioned here. Where does it fall on the transparency spectrum? What does it get right that the others don't?</li>
     </ol>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What trust mechanism does each of the three products use? Name all three.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Perplexity uses external evidence (citations/sources users can verify). Notion AI uses output quality (the result speaks for itself with no visible process). Cursor uses process visibility (full activity log showing every file read and edit made).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What three variables determine the right level of reasoning visibility for an AI product?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) How consequential the task is, (2) how expert the user is, and (3) how verifiable the output is on its own. Match your transparency to these three factors.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Notion AI's invisible approach works well for ______ tasks but is dangerous for ______ tasks. Fill in the blanks and explain why.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>It works well for low-stakes, easily-reversible tasks (like rewriting a paragraph) where the user can quickly judge quality by reading the output. It's dangerous for complex tasks where the user needs to evaluate the approach, not just the output — because when the AI is wrong, users have no reasoning to debug and no scaffold for understanding why or correcting course.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>

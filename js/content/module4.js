@@ -109,6 +109,31 @@ registerContent([
           <p class="lesson-text"><strong>3.</strong> Write a one-paragraph "backstage brief" for an agentic feature in your own product: list the agents involved, the handoffs between them, and the points where the user might need visibility or control.</p>
         </div>
 
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What are the three broad roles in a multi-agent system and what does each do?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Planner Agent (receives the user's goal and decomposes it into subtasks — the project manager), Worker Agent (specialists that handle focused tasks like coding, research, or review), Tool Agent (bridges between language models and the real world by calling APIs, querying databases, executing code — they're deterministic).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. What is a "handoff" in multi-agent systems, and why are handoffs where most failures occur?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>A handoff is the moment one agent passes context, instructions, or partial results to another. Failures occur at handoffs because if the passing agent's instructions are vague or the context is incomplete, the receiving agent produces irrelevant output. The failure is in the handoff communication, not in either agent's individual capability.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. Why is the "backstage" of a multi-agent system a design problem, not just an engineering problem?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Because what happens backstage is directly experienced by users — through wait times, partial updates, unexpected outputs, and failures they cannot diagnose. Users sense the complexity even when they can't see it. Designers must decide: how much orchestration to show, where users need visibility or control, and how to translate system events into user-meaningful information.</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `
   },
@@ -239,6 +264,31 @@ registerContent([
           <p class="lesson-text"><strong>1.</strong> Audit a product you use that involves AI-generated output. Where does it sit on the visibility spectrum? Would moving it one level in either direction improve the experience? Why or why not?</p>
           <p class="lesson-text"><strong>2.</strong> Design a confidence summary for an AI travel planning agent that has just booked a complex multi-city itinerary. What three pieces of information would you include? What would you put behind an expand/collapse?</p>
           <p class="lesson-text"><strong>3.</strong> Write two versions of a progress indicator for a multi-agent research task: one for a consumer audience and one for an expert audience. How do they differ in language, detail, and structure?</p>
+        </div>
+
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. What are the five zones of the visibility spectrum for agent systems?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Black Box (no visibility, only final output), Status Only (progress indicators like "Searching..."), Summary (confidence + key steps, details on demand), Step Trace (each agent step visible, expandable detail), Full Log (complete execution trace, every token and call).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. What three pieces of information should "always be shown" as minimum viable visibility in any agentic product?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>(1) What the system is currently doing in plain language, (2) how long it will roughly take, and (3) whether it succeeded or failed. This is the minimum. Additional detail (which sub-agents were involved, sources used, reasoning) should be available on request.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. What is the "confidence summary" pattern and what three elements does it include?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>The confidence summary is a compact end-of-task summary that tells users how confident the system is in its output. It includes: (1) a confidence signal ("High confidence — consistent across 4 sources"), (2) a source/step summary ("Searched 12 papers, analyzed 5 in depth"), and (3) an expandable trace for users who want to verify or debug.</p></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -398,6 +448,31 @@ registerContent([
           <p class="lesson-text"><strong>3.</strong> Consider whether your product should use <em>different</em> delegation levels for different user roles (e.g., admin vs. end user) or different task types. Sketch out a matrix mapping roles and tasks to levels.</p>
         </div>
 
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. Name the five levels of the Delegation Spectrum from least to most user control.</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Level 1: Silent Delegation (user sees only final result), Level 2: Progress Narration (system narrates in plain language, no intervention), Level 3: Checkpoint Control (system pauses at key decisions for approval), Level 4: Live Trace (user sees each step, can pause/retry/redirect), Level 5: Full Orchestration (user sees and configures the complete agent network).</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. What are the four decision criteria for choosing the right delegation level for a product feature?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>(1) Reversibility — can the user undo the agent's output? Less reversible = higher level needed. (2) User expertise — do users understand the domain? Less expertise = more context needed. (3) System reliability — how often does the pipeline produce correct results? Lower accuracy = higher visibility. (4) Task duration — longer tasks need more visibility and intervention capability.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. How do you test whether you've chosen the right delegation level? What are you measuring?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Build two prototypes at adjacent levels (e.g., Level 2 and Level 3) and give both to the same users. Measure task confidence ("How sure are you the output is correct?") and task efficiency ("How quickly did you get a usable result?"). The right level maximizes confidence without significantly hurting efficiency. Watch for signal mismatch: if users at Level 2 ask "how did it get that?" they need more; if users at Level 4 skip to the output, they need less.</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `
   },
@@ -550,6 +625,31 @@ registerContent([
           <p class="lesson-text"><strong>3.</strong> Pick a product idea you are working on (or invent one). Which of these three philosophies — structured trace, verbose log, or minimal output — best fits your users? Write a brief argument for your choice using the three synthesis questions above.</p>
         </div>
 
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. At what delegation level does each product sit: Devin, AutoGPT, and Claude Code?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Devin sits at Level 4 (Live Trace) with a structured task log. AutoGPT sits at Level 5 (Full Orchestration) with verbose thought streams. Claude Code sits at Level 3 (Checkpoint Control) with minimal terminal actions and permission gates.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. What is the key design insight behind Devin's structured task log that makes it effective?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>The task log translates raw agent actions into human-meaningful narrative. You never see "Agent 3 invoked tool_run_code with parameters {...}" — you see "Ran the test suite." This translation layer is the most important and most undervalued design work in multi-agent UI. The log is also grouped by intent, allowing quick scanning with drill-down on demand.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. What three questions should guide your choice of orchestration UI philosophy?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>(1) How technical is your audience? (determines how much raw detail they can parse), (2) How consequential are the actions? (determines how much verification users need), (3) Is the user collaborating or supervising? (determines how much agency the interface needs to provide — redirect capability vs. approve-only vs. observe-only).</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     `
   },
@@ -678,6 +778,31 @@ registerContent([
           <p class="lesson-text"><strong>1.</strong> Before you start designing, write down three assumptions you are making about what analysts need to see. How would you validate each assumption? What user research method would give you the fastest signal?</p>
           <p class="lesson-text"><strong>2.</strong> The "emergency stop" button is easy to add but has complex implications — how do you assemble a coherent partial report from an incomplete pipeline? Write a brief spec for how the system should handle a mid-pipeline stop at each of the five stages.</p>
           <p class="lesson-text"><strong>3.</strong> Imagine Deepfield grows to support 10 concurrent research tasks. How does the dashboard need to change? Sketch a multi-task monitoring view that lets analysts track several pipelines at once without losing the detail available in the single-task view.</p>
+        </div>
+
+        <div class="lesson-practice">
+          <h3>Test Your Understanding</h3>
+          <div class="practice-q">
+            <p>1. The Deepfield project brief specifies Level 3 (Checkpoint Control) with selective Level 4 elements. What specific evidence from the four decision criteria supports this choice?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Reversibility: output goes into client presentations, errors are hard to retract (pushes toward higher visibility). User expertise: analysts understand research methodology but not AI (need research language, not agent language). System reliability: 85% accuracy — good but not enough for a black box. Task duration: 5-15 minutes, long enough for context-switching away and back.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>2. Why should the pipeline stages be named in "research language" rather than "agent language"?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Because the users are consultants and analysts, not engineers. "Planning research approach" is meaningful to them; "Query Planner agent running" is not. The language determines whether users feel they're supervising a research process (familiar, trustworthy) or monitoring a computer system (alien, anxiety-inducing). Domain-native language builds trust.</p></div>
+            </div>
+          </div>
+          <div class="practice-q">
+            <p>3. What are the three failure severity levels the dashboard should support, and what happens at each?</p>
+            <div class="practice-reveal">
+              <span class="reveal-btn">Show Answer</span>
+              <div class="reveal-body"><p>Warning (minor — shown in the step feed, pipeline continues automatically, e.g., a single source fails to load). Error (stage-level — pipeline pauses, analyst decides whether to continue or retry, e.g., a key database is inaccessible). Critical (pipeline-halting — analyst must intervene, e.g., the Fact Checker flags major contradictions in the synthesis).</p></div>
+            </div>
+          </div>
         </div>
 
       </div>

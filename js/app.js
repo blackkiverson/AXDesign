@@ -172,6 +172,11 @@ function openLesson(id){
     item.addEventListener('click', ()=> item.classList.toggle('checked'));
   });
 
+  // Bind knowledge check reveal buttons
+  lessonContainer.querySelectorAll('.practice-reveal .reveal-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=> btn.parentElement.classList.toggle('show'));
+  });
+
   document.getElementById('main').scrollTo({top:0,behavior:'smooth'});
   buildSidebar();
 }

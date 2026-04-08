@@ -132,6 +132,31 @@ registerContent([
     <p class="lesson-text"><strong>3.</strong> For your highest-scoring idea, write a complete design brief using the template above. Share it with a peer or mentor for feedback before moving to Lesson 6-2.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the four core domain categories for agentic products, and what is the primary UX challenge for each?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Research Agents (transparency of sources &mdash; provenance and citation flows), Productivity Agents (delegation and control &mdash; permission models and undo flows), Creative Agents (authorship and iteration &mdash; revision flows and style controls), Customer Service Agents (escalation and empathy &mdash; handoff patterns and failure recovery).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Name the six criteria in the Domain Evaluation Matrix for scoring a capstone idea.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Agentic Richness (requires multi-step agent actions), User Stakes (consequences of errors are meaningful), Scope Fit (designable in 2 weeks), Portfolio Value (stands out to hiring managers), Personal Interest (you'll stay motivated), Access to Users (you can find 3&ndash;5 people to interview).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the "One User, One Job" scoping rule and why is it important for a two-week sprint?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Pick one specific user persona and one specific job they're hiring the agent to do &mdash; not "a marketing team using AI" but "a solo content marketer who needs to repurpose a blog post into social media threads automatically." It's important because the narrower the focus, the deeper the design thinking can go. In two weeks, you're designing a few flows deeply, not building a complete product.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -254,6 +279,31 @@ registerContent([
     <p class="lesson-text"><strong>3.</strong> Complete the Synthesis Framework table and update your design brief. Highlight the three most important findings that will shape your agentic flow design in Lesson 6-3.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What makes interviewing users about AI products fundamentally different from traditional UX research?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>People carry strong preconceptions about AI (from sci-fi fantasies to deep skepticism) that shape their responses. Also, you're often researching a product category that doesn't yet exist in the user's life, so you can't ask "tell me about your experience" &mdash; you must shift to understanding their current workflow, pain points, and decision-making so you can design the right agent behavior.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What is the purpose of the interview question "If someone else was going to do this task for you, what instructions would you give them?"</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>It reveals the user's mental model of delegation, which directly maps to how they will interact with an agent. The instructions they'd give a human delegate (what to do, what to check, what not to touch) are essentially the requirements for the agent's autonomy model, approval flows, and scope boundaries.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What are the four trust patterns to look for when synthesizing interview data?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Verification Need &mdash; "I would want to check it before..." (signals need for preview/approval screens), (2) Past Betrayal &mdash; "I tried [tool] once and it..." (signals skepticism to proactively address), (3) Conditional Trust &mdash; "I'd be fine with that if..." (signals exact design criteria for building trust), (4) Expertise Tension &mdash; "I know better than any tool about..." (signals areas where the agent should defer to user judgment).</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -336,6 +386,31 @@ registerContent([
     <p class="lesson-text"><strong>1.</strong> Create your Agentic Flow Map using the swim-lane template. Map the happy path first, then add at least two branching scenarios (agent uncertainty and user override). Identify every handoff point between user and agent.</p>
     <p class="lesson-text"><strong>2.</strong> Using the Screen Checklist above, decide which screens your product needs. For each one you include, write a one-sentence rationale. For each one you exclude, write why it is unnecessary for your specific domain.</p>
     <p class="lesson-text"><strong>3.</strong> Wireframe or mockup your key screens with agentic annotations. Aim for high fidelity on your 2-3 most important handoff moments and mid fidelity for everything else. Be ready to walk someone through your flow in under 5 minutes.</p>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What is an "agentic flow map" and how does it differ from a standard user flow diagram?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>An agentic flow map is a swim-lane diagram with two lanes &mdash; one for the user and one for the agent. Between them, you map every interaction point where control passes between them (handoffs). It differs from a standard flow because it accounts for two actors taking actions, showing when the agent acts autonomously, when it pauses for user input, and how the user monitors and corrects.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Name four types of agentic annotations that should be added to wireframes beyond standard UI annotations.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Autonomy Level Labels &mdash; marking each agent action as Autonomous, Supervised, or On-demand. (2) Confidence and Uncertainty Indicators &mdash; where and how the UI signals agent certainty. (3) Fallback Behaviors &mdash; what happens when each agent action fails (retry, ask user, degrade gracefully). (4) Data Flow Notes &mdash; what information the agent needs at each step and where it comes from.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Where should you invest high-fidelity design effort in a time-constrained sprint, and why?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Invest high fidelity in your 2&ndash;3 most critical handoff moments &mdash; the approval screen, results review, and error state. These are the screens that demonstrate agentic thinking most clearly. Use mid-fidelity for the core flow and low-fidelity for edge cases. A common mistake is making every screen beautiful while leaving the agentic logic shallow. Hiring managers forgive rough visuals but not shallow thinking.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -479,6 +554,31 @@ registerContent([
     <p class="lesson-text"><strong>3.</strong> Based on the critique, identify your top 3 revisions and implement them. Document what changed and why in preparation for your case study.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the four steps of the structured feedback method for critiquing agentic designs?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Describe What You See &mdash; state the design's intent as you understand it to confirm alignment. (2) Name the Framework &mdash; ground feedback in a specific framework (trust, autonomy, transparency). (3) Pose a Scenario &mdash; test the design with a specific what-if situation to expose gaps. (4) Suggest a Direction &mdash; offer a constructive starting point for iteration, not a prescription.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Name three of the four common gaps found in first-time agentic designs.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) The Happy Path Trap &mdash; design only shows the agent working perfectly with no error states. (2) The Transparency Gap &mdash; user sees output but not reasoning or process. (3) The Control Illusion &mdash; settings give appearance of control but don't meaningfully change agent behavior. (4) The Feedback Dead End &mdash; user can correct the agent once but corrections don't carry forward.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. When prioritizing revisions after critique, what should be addressed first, second, and third?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>First: gaps in core handoff moments (if the agent-to-user transition is unclear at the critical point). Second: missing error or edge case states for high-stakes actions (add at least one failure scenario). Third: visual polish, secondary flows, or settings screens (these matter but are less impactful for demonstrating agentic thinking in a portfolio).</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -557,6 +657,31 @@ registerContent([
     <p class="lesson-text"><strong>1.</strong> Write your complete case study following the template structure above. Aim for 1,000-1,500 words plus annotated images. Focus on decisions and rationale, not just descriptions of screens.</p>
     <p class="lesson-text"><strong>2.</strong> Include at least one paragraph that honestly discusses an unresolved tradeoff or uncertainty in your design. Use the "Why not?" technique for your three most important design decisions.</p>
     <p class="lesson-text"><strong>3.</strong> Publish your case study on at least one platform and share the link with your cohort. Read two peers' case studies and leave substantive feedback using the critique framework from Lesson 6-4.</p>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the seven sections of the AI product case study template, in order?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) The Hook (problem in human terms, 100 words), (2) Context and Scope (project parameters, 150 words), (3) Research Findings (key insights with quotes, 200 words), (4) The Agentic Design Challenge (what made it specifically agentic, 150 words), (5) Design Decisions (3&ndash;4 key decisions with tradeoffs, 300 words), (6) Iteration and Critique (how design evolved, 150 words), (7) Reflection (what you'd do differently, open questions, 100 words).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What is the "Why not?" technique and why does a single sentence using it demonstrate more design maturity than five polished screens?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>For each major design decision, write one sentence about an alternative you considered and why you didn't choose it. Example: "I considered auto-approving after three successful sends, but users expressed discomfort with earning autonomy without explicit opt-in, so I kept the approval step with a toggle." It demonstrates maturity because it shows you evaluated options, understood tradeoffs, grounded decisions in research, and made deliberate choices &mdash; the full arc of design thinking.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Why should a case study lead with the problem, not the solution, when sharing it publicly?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Because "How do you design trust into an AI system that makes decisions with real consequences?" is more compelling than "I designed an AI scheduling assistant." Leading with the problem hooks the reader by making them care about the challenge before introducing the solution. Hiring managers want to see how you think about problems, not just what you built.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>

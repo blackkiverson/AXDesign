@@ -104,6 +104,31 @@ registerContent([
     </div>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the three phases of the agent interaction framework, and what is the key design question for each?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Intent (How well does the system capture what the user actually wants?), Action (How does the user know what's happening during execution?), Result (How does the output connect back to the original request and what can the user do next?).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Which transition between phases is the "commitment moment" and why is it critical?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>The Intent-to-Action transition is the commitment moment. The user has stated what they want and the agent is about to act. This is where confirmation patterns, previews, and explicit approvals live. It's critical because once the agent begins acting, changes become harder to undo.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Why should every result screen be designed as the beginning of the next intent phase, not a dead end?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Because users rarely get what they want on the first try. The best agent experiences don't end at the result — they suggest refinements, surface related tasks, and invite iteration. ChatGPT's follow-up suggestions and Midjourney's variation buttons are examples that close the loop and keep users in flow.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -195,6 +220,31 @@ registerContent([
     </div>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. Name three types of prompt scaffolding and give a real product example for one.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Starter prompts (e.g., ChatGPT's clickable suggestion chips), Template slots (e.g., Notion AI's tone and format selectors), Contextual suggestions (e.g., Figma AI suggesting design-relevant actions on selected elements), Progressive complexity (e.g., Midjourney allowing parameter additions like --ar 16:9).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What is the "disambiguation sweet spot" — when should you ask for clarification vs. assume the user's intent?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Ask when the cost of guessing wrong is high (e.g., file deletion). Assume when the cost of asking is higher than the cost of being wrong (e.g., a grammar check). The key principle: the cost of clarifying intent upfront is always lower than delivering the wrong result for high-stakes actions.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Why should designers avoid using the word "prompt" with mainstream users, and what should they say instead?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Many mainstream users have never used ChatGPT and don't know what a "prompt" is. Design as though the word doesn't exist. Use task-specific language instead: "describe what you need," "tell us what to change," or action-specific labels. Canva's Magic Write uses buttons like "Make it longer" and "Summarize" — prompts disguised as buttons that users never have to formulate themselves.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -280,6 +330,31 @@ registerContent([
         <li><strong>Spot confirmation fatigue:</strong> Use an AI product for 15 minutes and count every confirmation prompt. Which ones felt necessary? Which ones felt like interruptions? What would you remove or change?</li>
         <li><strong>Design a checkpoint flow:</strong> Sketch a multi-step agent task (like "reorganize my photo library") and design checkpoint moments at natural breakpoints. What information does each checkpoint show? How does the user continue or redirect?</li>
       </ol>
+    </div>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What is the difference between a "confirmation gate" and a "preview" in agent UX, and when is each more appropriate?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>A confirmation gate asks the user to approve before the agent acts (appropriate for irreversible actions like sending emails or making purchases). A preview shows the full output in a draft/sandbox state for review before it "goes live" (appropriate for complex outputs like code changes or document edits where quality review matters more than a simple yes/no).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What principle should determine where confirmation checkpoints are placed in a multi-step agent flow?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Confirmation checkpoints should be placed based on consequence, not frequency. Don't ask for confirmation on every action — ask at the transitions where actions cross from reversible to irreversible, or when the scope of impact increases significantly. The goal is to prevent harm without creating "confirmation fatigue."</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Describe the "assumed intent with escape hatch" disambiguation pattern and when to use it.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>The agent picks the most likely interpretation of an ambiguous request and states its assumption clearly: "I'll improve the writing style. Want me to do something different instead?" Use it when the cost of guessing wrong is moderate — the agent moves fast while giving the user an easy override path. It's faster than asking upfront but safer than silent assumption.</p></div>
+      </div>
     </div>
   </div>
 
@@ -390,6 +465,31 @@ registerContent([
     </div>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What is the difference between streaming output token-by-token and showing a completed result, and when is each better?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Streaming (showing output as it generates) is better for short-to-medium tasks where watching the output form builds confidence and lets users interrupt early if it's going wrong. Showing a completed result is better when the output needs to be evaluated holistically (like a code diff) or when partial results would be confusing.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What are the three levels of progressive disclosure for agent activity during a task?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Level 1: Status headline (always visible — "Analyzing 47 documents..." or "3 of 5 steps complete"), Level 2: Current action (visible on hover/expand — "Reading quarterly-report-Q3.pdf"), Level 3: Full activity log (available on click — complete chronological list of every action taken).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Why is a fake percentage progress bar a bad design choice for agent tasks?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Agent tasks are unpredictable in duration — the agent might complete in 30 seconds or take 10 minutes depending on what it encounters. A fake percentage bar creates false expectations and destroys trust when it stalls at 90% for several minutes. Better alternatives: meaningful progress indicators showing actual steps completed, activity feeds showing what the agent is currently doing, or stage-based progress ("Step 2 of 5: Analyzing sources").</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -486,6 +586,31 @@ registerContent([
         <li><strong>Rewrite error messages:</strong> Find 5 error messages in AI products you use. Rewrite each one to be specific, honest, non-blaming, and actionable. Include at least one recovery pathway in each message.</li>
         <li><strong>Design an undo flow:</strong> Pick an agent action with meaningful consequences (e.g., AI reformatting a slide deck). Design the complete undo experience: how is the undo surfaced, how long is it available, what does the user see when they undo, and what happens to the agent's work?</li>
       </ol>
+    </div>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. Why is the first agent failure the most important UX moment in the entire product?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>The first failure teaches users more about the agent than ten successful interactions. How the agent handles failure — whether it explains what went wrong, what it tried, and what the user can do next — sets the user's mental model for the agent's reliability and trustworthiness. A graceful first failure builds trust; a confusing one can permanently damage the user's perception.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What three pieces of information should every agent error message include?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) What went wrong (specific description of the failure), (2) What the agent already did (so the user knows the current state), and (3) What the user can do next (actionable recovery options like retry, modify input, or try a different approach). Generic "Something went wrong" messages are unacceptable.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the difference between a recoverable error and a terminal error in an agent system, and how should each be designed?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>A recoverable error means the agent can try a different approach or the user can provide additional input to continue (design: show the error, explain alternatives, offer retry/redirect options). A terminal error means the task cannot be completed (design: show what was accomplished before failure, save partial results, explain clearly why it can't continue, and suggest manual alternatives).</p></div>
+      </div>
     </div>
   </div>
 
@@ -619,6 +744,31 @@ registerContent([
         <li><strong>Stress test your edge cases:</strong> Role-play as a hostile user. Try to break your own design. What happens if someone asks the agent to delete everything? What if they connect an empty drive? What if they give contradictory instructions? Do your error states hold up?</li>
         <li><strong>Connect to Module 4:</strong> Review your FileFlow design through the lens of trust (which we will cover in the next module). Where does your design build trust? Where might it erode trust? Make a list of trust-building moments and trust-risk moments in your flow.</li>
       </ol>
+    </div>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. In a task agent flow design, what are the three essential phases that every screen in the flow should map to?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Every screen should map to one of the three interaction phases: Intent (task initiation and configuration), Action (agent working state with progress/monitoring), or Result (output review with approval/iteration controls). If a screen doesn't clearly belong to one of these phases, it may be unnecessary or poorly positioned in the flow.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Why is designing the error path just as important as designing the happy path in an agent flow?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Agents fail regularly — they encounter ambiguity, external service failures, low confidence results, and user intent mismatches. If you only design the happy path, every failure becomes a dead end that breaks user trust. The error path is where trust is built or destroyed, because users judge products by their worst moments, not their best.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the purpose of including a "checkpoint" in a multi-step agent flow, and where should it be placed?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>A checkpoint is a pause point where the agent presents its progress or plan for user review before continuing. It should be placed at transitions between phases where the consequence of proceeding incorrectly increases — especially before irreversible actions, after gathering information (to confirm the right direction), and when the agent encounters ambiguity or low confidence.</p></div>
+      </div>
     </div>
   </div>
 

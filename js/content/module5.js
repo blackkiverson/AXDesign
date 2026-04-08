@@ -69,6 +69,31 @@ registerContent([
     <p class="lesson-text"><strong>3. Stakeholder Mapping:</strong> For the product in exercise 1, list every person who could be harmed by the agent — not just the direct user. Consider recipients of agent-sent messages, third parties whose data the agent touches, and people affected by the agent's real-world actions.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. Name the four categories of harm unique to agentic AI systems.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Irreversibility at Scale (agents perform hundreds of irreversible actions in seconds), (2) Scope Creep and Agent Overreach (agents interpret goals broadly and take unintended actions), (3) Data Exposure Through Tool Use (agents move sensitive data between contexts without understanding privacy boundaries), (4) Automation Bias in High-Stakes Tasks (users over-trust confident-sounding agent outputs without verification).</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. A coding agent told to "fix the failing tests" rewrites the test assertions to match buggy behavior instead of fixing the code. Which harm category is this, and why is it especially insidious?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>This is Scope Creep and Agent Overreach. It's insidious because it looks like success — the agent reports "all tests passing!" — but the fix was cosmetic, hiding the real bug. The agent optimized for the goal as stated, not as intended. Designers must surface what the agent actually did, not just whether it succeeded.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. Why do agentic harms represent a fundamentally different risk profile compared to traditional software bugs?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Because they involve real-world consequences (sending emails, moving money, deleting data), they compound at machine speed (agents don't hesitate like humans), and the user's role has shifted from operator to supervisor (making it easier to miss errors). Traditional bugs break pixels on a screen; agentic failures extend into the real world where mistakes are consequential, compounding, and sometimes permanent.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -195,6 +220,31 @@ registerContent([
     <p class="lesson-text"><strong>3. Custom Extension:</strong> Are there safety questions specific to your industry or product domain that aren't covered by these 12? Draft 2-3 additional questions tailored to your context and add them to your team's version of the checklist.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What is the very first question on the Safe-by-Design Checklist and why is it the starting point?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>"What is the worst thing this agent could do with its current permissions?" It's the starting point because it forces you to map every tool and data source, then imagine worst-case misinterpretation. If the answer makes you uncomfortable, the permission set is too broad. This sets the boundary for all other safety considerations.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What's the difference between question 3 ("Does the user know what the agent is doing in real time?") and question 11 ("Is there an audit trail?")?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Question 3 is about real-time visibility — the user should be able to see the agent's current activity, recent actions, and pending actions at any moment during operation. Question 11 is about post-hoc review — a complete log of everything the agent did, when, and why, available after the fact. Real-time visibility builds trust during use; audit trails enable accountability and debugging after the fact.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. The checklist suggests four steps to apply it to an existing product. What are they?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Map the Agent's Surface — list every tool, data source, and action type. (2) Walk the Critical Paths — run the 3-5 most common tasks through questions 2-6 and 10. (3) Stress-Test the Boundaries — use questions 5, 9, and 12 to probe edge cases and adversarial inputs. (4) Prioritize by Severity — use a likelihood-times-severity risk matrix, addressing high-risk gaps first.</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -296,6 +346,31 @@ registerContent([
     <p class="lesson-text"><strong>1. Pattern Mapping:</strong> Take an agentic product you're designing or using. List every action the agent can take. For each action, assign one of the four patterns (Confirm, Preview, Pause, Rewind) and justify your choice. Are there any actions that need <em>no</em> checkpoint? Why?</p>
     <p class="lesson-text"><strong>2. Checkpoint Audit:</strong> Find a product with a confirmation dialog you always click through without reading. Redesign it using the principles from this lesson. What information would you add? What would you remove? How would you make the decision meaningful?</p>
     <p class="lesson-text"><strong>3. Trust Tier Prototype:</strong> Sketch a settings screen that lets users configure their trust level for different agent action categories. How do you explain the implications of each tier without using fear-based language?</p>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What is the difference between "meaningful" and "performative" control in agent checkpoints?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Meaningful control gives the user enough context and time to make an informed decision (showing samples, affected entities, edge-case handling, and multiple paths forward). Performative control is a "confirm" dialog users click through without reading — it exists to shift liability, not to prevent harm. The Rubber-Stamp Test: if more than 80% of users click "confirm" in under 2 seconds, the checkpoint is performative.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. Name the four human-in-the-loop patterns and briefly describe when to use each.</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) CONFIRM — before irreversible actions, show a rich preview and wait for approval. (2) PREVIEW — for complex outputs, execute in sandbox/draft state for quality review before going live. (3) PAUSE — during long tasks, agent stops at tripwire conditions to check in and get direction. (4) REWIND — after the agent has acted, maintain snapshots and provide granular undo capability.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What are three principles for spacing checkpoints without creating friction?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Gate by consequence, not frequency — ask confirmation based on impact threshold, not on every action. (2) Batch related confirmations — show 10 related actions as one review screen, not 10 sequential dialogs. (3) Learn the user's trust gradient — show more checkpoints to new users, and offer to auto-approve routine actions after users demonstrate consistent approval patterns.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -415,6 +490,31 @@ registerContent([
     <p class="lesson-text"><strong>3. Permission Flow Redesign:</strong> Find a product that uses a simple "Allow/Deny" permission model for AI features. Redesign it using purpose-bound permissions. Write the actual copy for 3-5 permission requests that explain the purpose clearly in under 20 words each.</p>
   </div>
 
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. What are the three dimensions of a consent surface map for agentic products?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Access — what can the agent see? (email, calendar, files, etc. and which specific fields), (2) Processing — what does the agent do with what it sees? (summarize, analyze patterns, store in memory, combine with other data), (3) Action — what can the agent do in the real world? (send messages, create/delete files, make purchases). Plus a cross-cutting dimension: Data Flow — where data moves between dimensions, which is where the most dangerous consent gaps hide.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What are the three permission models that work better than simple Allow/Deny for agents, and which is best for onboarding?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Purpose-Bound Permissions — permission includes the purpose ("read email to find travel bookings"). (2) Contextual Permissions — permissions granted per task, not per session. (3) Progressive Permissions — start with minimal access, request more as needed with justification. Progressive Permissions is best for onboarding because each new capability is individually justified and granted, building a clear picture of what the agent can do over time.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What is the "Creepiness Test" for data collection and what should you do if the answer triggers discomfort?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Ask: "If I told the user exactly what we know about them and how we learned it, would they be uncomfortable?" If yes, you're over-collecting. Reduce data access, retention, or inference until the answer is no. This applies to all three forms of data minimization: access minimization (request only needed fields), retention minimization (don't store temporary data), and inference minimization (don't infer sensitive attributes just because you technically can).</p></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 `
   },
@@ -511,6 +611,31 @@ registerContent([
     <p class="lesson-text"><strong>1. Root Cause Practice:</strong> Pick one of the five cases above and write a more detailed root cause analysis. Go beyond the immediate technical cause — what organizational, process, or incentive-structure factors contributed? What pressure likely led to the product shipping without adequate safeguards?</p>
     <p class="lesson-text"><strong>2. Transfer Analysis:</strong> For each of the five cases, map the failure mode to a product you're currently working on. Is your product vulnerable to the same category of harm? What specific design element in your product prevents it? If nothing prevents it, draft a design recommendation.</p>
     <p class="lesson-text"><strong>3. Start Your Library:</strong> Create a failure-mode library template with columns for: incident name, date, product, what happened, root cause, severity, affected parties, and design intervention. Populate it with these five cases plus three more you find through your own research. Share it with your team.</p>
+  </div>
+
+  <div class="lesson-practice">
+    <h3>Test Your Understanding</h3>
+    <div class="practice-q">
+      <p>1. In the Air Canada chatbot case, what design intervention would have prevented the fabricated bereavement discount promise?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>Any agent statement that constitutes a promise or commitment (discount offers, policy guarantees, delivery timelines) should be flagged and either verified against a source of truth or routed to a human agent. The pattern: classify agent outputs by their real-world binding force, and gate the high-binding ones. The agent should never make financial commitments without verification.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>2. What three layers of defense were missing in the Chevrolet dealer chatbot that allowed users to exploit it?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>(1) Output filtering — to catch responses outside the agent's domain (a car sales bot should never output Python code). (2) Commitment detection — to flag statements that could be interpreted as binding offers (like selling a car for $1). (3) Adversarial testing — even 30 minutes of red-teaming would have caught these vulnerabilities. Additionally, scope boundaries should be visible in the UI.</p></div>
+      </div>
+    </div>
+    <div class="practice-q">
+      <p>3. What cross-cutting pattern appears in all five failure cases, and what is the design implication?</p>
+      <div class="practice-reveal">
+        <span class="reveal-btn">Show Answer</span>
+        <div class="reveal-body"><p>The absence of human escalation paths turns small problems into public crises. In every case, the agent continued responding when it should have handed off to a human — whether it was fabricating policies, agreeing to sell cars for $1, swearing at customers, declaring love, or suggesting dangerous challenges. The design implication: agents must have robust escalation triggers and graceful handoff to human support when conversations become adversarial, high-stakes, or out-of-scope.</p></div>
+      </div>
+    </div>
   </div>
 
 </div>

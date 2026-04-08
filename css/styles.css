@@ -172,6 +172,21 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .lesson-exercise p,.lesson-exercise li{font-size:12.5px;color:var(--muted);line-height:1.7;}
 .lesson-exercise ol,.lesson-exercise ul{padding-left:1.25rem;display:flex;flex-direction:column;gap:6px;margin-top:.5rem;}
 
+/* ── Knowledge Check (practical exercises) ── */
+.lesson-practice{background:var(--bg2);border:1px solid rgba(74,144,217,.32);border-radius:12px;padding:1.25rem;margin:1.5rem 0;position:relative;}
+.lesson-practice::before{content:'Knowledge Check';position:absolute;top:-9px;left:16px;background:var(--blue);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;border-radius:99px;font-weight:500;}
+.lesson-practice h3{font-size:14px;font-weight:500;margin-bottom:.75rem;margin-top:.25rem;color:var(--text);}
+.lesson-practice .practice-q{margin-bottom:12px;}
+.lesson-practice .practice-q > p{font-size:12.5px;color:var(--muted);line-height:1.7;font-weight:500;}
+.practice-reveal{margin-top:6px;}
+.practice-reveal .reveal-btn{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--blue);cursor:pointer;padding:4px 10px;border-radius:6px;border:1px solid rgba(74,144,217,.25);background:var(--blue-d);transition:all .15s;user-select:none;}
+.practice-reveal .reveal-btn:hover{background:rgba(74,144,217,.2);border-color:rgba(74,144,217,.4);}
+.practice-reveal .reveal-btn::after{content:'\25BC';font-size:8px;transition:transform .2s;}
+.practice-reveal.show .reveal-btn::after{transform:rotate(180deg);}
+.reveal-body{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding:0 0;}
+.practice-reveal.show .reveal-body{max-height:500px;padding:10px 0 0;}
+.reveal-body p{font-size:12.5px;color:var(--green);line-height:1.7;background:var(--green-d);border:1px solid rgba(86,163,116,.2);border-radius:8px;padding:10px 14px;}
+
 .lesson-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:.5rem;}
 
 /* Diagram flow elements */
